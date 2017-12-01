@@ -15,8 +15,8 @@ RUN set -ex \
 		--with-jpeg-dir=/usr \
 		--with-png-dir=/usr \
 	&& docker-php-ext-install -j "$(nproc)" gd mbstring opcache pdo pdo_mysql pdo_pgsql zip \
-        && apt-get update \
-        && apt-get install -y git zip unzip \
+	&& apt-get update \
+	&& apt-get install -y git zip unzip vim nano \
 # PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20151012/gd.so' - libjpeg.so.62: cannot open shared object file: No such file or directory in Unknown on line 0
 # PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20151012/pdo_pgsql.so' - libpq.so.5: cannot open shared object file: No such file or directory in Unknown on line 0
 	&& apt-mark manual \
@@ -59,7 +59,8 @@ RUN git clone -b ${BRANCH} https://github.com/getyoti/yoti-drupal-8.git --single
         && cd yoti-drupal-8 \
         && ./pack-plugin.sh \
         && mv ./yoti-for-drupal-8.x-1.x-edge.zip ${DIRPATH}/modules \
-        && cd .. && rm -rf yoti-drupal-8 \
+        && cd .. \
+        && rm -rf yoti-drupal-8 \
         && cd ${DIRPATH}/modules \
         && unzip yoti-for-drupal-8.x-1.x-edge.zip \
         && rm -f yoti-for-drupal-8.x-1.x-edge.zip

@@ -5,7 +5,7 @@ Run the following command
 
 Browse `http://localhost:8006`
 
-Enter the folowing details fro the detabase
+Enter the folowing details for the detabase
 
 DB_USER_NAME drupal
 
