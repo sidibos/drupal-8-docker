@@ -1,6 +1,6 @@
 # drupal-8-docker
 ## Set up
-Run the following command `docker-compose up -d --build`
+Run the following command `docker-compose up -d` Add `--build` to rebuild the image
 
 Browse `http://localhost:8006`
 
