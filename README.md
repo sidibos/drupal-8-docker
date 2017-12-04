@@ -4,7 +4,7 @@ Run the following command `docker-compose up -d --build`
 
 Browse `http://localhost:8006`
 
-Enter the folowing details for the detabase
+Enter the folowing details for the database
 
 User Name `drupal`
 
