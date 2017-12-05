@@ -1,15 +1,17 @@
 # drupal-8-docker
+Yoti Docker module for Drupal 8 including Yoti plugin.
+
 ## Set up
 Run the following command `docker-compose up -d` Add `--build` to rebuild the image
 
-Browse `http://localhost:8006`
+Browse `http://localhost:8008`
 
 Enter the folowing details for the database
 
 User Name `drupal`
 
-PASSWORD `drupal`
+Password `drupal`
 
 Database Name `drupal`
 
-HOST `yoti-drupal-8-db`
+Host `yoti-drupal-8-db`

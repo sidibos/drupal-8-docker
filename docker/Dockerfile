@@ -40,6 +40,7 @@ RUN { \
 ENV DIRPATH /var/www/html
 ENV DEFAULT_BRANCH master
 ENV DRUPAL_VERSION 8.4.2
+ENV PLUGIN_PACKAGE_NAME yoti-for-drupal-8.x-1.x-edge.zip
 ENV DRUPAL_MD5 a2b294d82ce751f93ba600f2de7884f4
 
 WORKDIR $DIRPATH
@@ -58,9 +59,9 @@ RUN git clone -b ${BRANCH} https://github.com/getyoti/yoti-drupal-8.git --single
         && echo "Finished cloning ${BRANCH}" \
         && cd yoti-drupal-8 \
         && ./pack-plugin.sh \
-        && mv ./yoti-for-drupal-8.x-1.x-edge.zip ${DIRPATH}/modules \
+        && mv ./${PLUGIN_PACKAGE_NAME} ${DIRPATH}/modules \
         && cd .. \
         && rm -rf yoti-drupal-8 \
         && cd ${DIRPATH}/modules \
-        && unzip yoti-for-drupal-8.x-1.x-edge.zip \
-        && rm -f yoti-for-drupal-8.x-1.x-edge.zip
+        && unzip ${PLUGIN_PACKAGE_NAME} \
+        && rm -f ${PLUGIN_PACKAGE_NAME}
