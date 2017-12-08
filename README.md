@@ -7,7 +7,7 @@ Run the following command `docker-compose up -d` Add `--build` to rebuild the im
 Browse `http://localhost:8008`
 
 ## Database Configuration
-Enter the folowing details for the database
+Enter the following details for the database
 
 User Name `drupal`
 
